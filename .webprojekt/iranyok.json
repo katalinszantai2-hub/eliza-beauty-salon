@@ -1,0 +1,65 @@
+{
+  "directions": [
+    {
+      "id": 1,
+      "slug": "torodo-feny",
+      "name": "Törődő fény",
+      "description": "Tágas, nyugodt szalonhangulat Cormorant Garamond címsorokkal és Jost szövegekkel. A hero bal oldalán az üzenet, jobb oldalán Eliza portréja jelenik meg. Krém, púder és rózsafa árnyalatok váltakoznak, finom arany részletekkel.",
+      "rationale": "A személyes törődést és Eliza szakértelmét emeli ki. A meglévő arculatra épít, és mindkét célcsoportnak egyformán tiszta utat ad.",
+      "palette": {
+        "primary": "#8E4A5A",
+        "secondary": "#2E2626",
+        "accent": "#C9A27E",
+        "bg": "#FAF6F2",
+        "surface": "#F1E6DF",
+        "text": "#2E2626",
+        "muted": "#6B5F5C"
+      },
+      "fonts": {
+        "heading": { "family": "Cormorant Garamond", "fallback": "Georgia, serif" },
+        "body": { "family": "Jost", "fallback": "system-ui, sans-serif" },
+        "google_fonts_url": "https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Jost:wght@400;500;600&display=swap"
+      },
+      "contrast_axes": {
+        "density": "spacious",
+        "typography": "serif-display + clean-humanist-sans",
+        "hero": "split-screen-portrait",
+        "visual_metaphor": "quiet-studio",
+        "rhythm": "alternating-editorial-sections",
+        "shape": "soft-rectangles-and-fine-lines",
+        "proof": "testimonial-led"
+      }
+    },
+    {
+      "id": 2,
+      "slug": "tiszta-energia",
+      "name": "Tiszta energia",
+      "description": "Valóban élénk elektromálna, ultramarin és citrus színek, professzionális beauty stúdió hangulattal. A címsorokat Manrope, a törzsszöveget Source Sans 3 adja. Eliza portréja nagy, határozott képkivágásban jelenik meg, telített színblokkokkal és sok világos térrel.",
+      "rationale": "Láthatóan eltér a pasztell iránytól, így valódi összehasonlítást ad. A geometrikus kompozíció, a szabályozott színhasználat és a nyugodt fotók a vibráló paletta mellett is prémium, felnőtt márkaérzetet tartanak.",
+      "palette": {
+        "primary": "#E5006E",
+        "secondary": "#3A36F5",
+        "accent": "#FFB800",
+        "bg": "#FFFDFB",
+        "surface": "#F3EFFC",
+        "text": "#241622",
+        "muted": "#625768"
+      },
+      "fonts": {
+        "heading": { "family": "Manrope", "fallback": "Arial, sans-serif" },
+        "body": { "family": "Source Sans 3", "fallback": "system-ui, sans-serif" },
+        "google_fonts_url": "https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Source+Sans+3:wght@400;500;600;700&display=swap"
+      },
+      "contrast_axes": {
+        "density": "balanced",
+        "typography": "geometric-sans-with-bold-display",
+        "hero": "color-field-split-with-portrait",
+        "visual_metaphor": "professional-beauty-studio",
+        "rhythm": "asymmetric-color-blocks",
+        "shape": "crisp-geometry",
+        "proof": "results-and-testimonial-led"
+      }
+    }
+  ],
+  "total": 2
+}
