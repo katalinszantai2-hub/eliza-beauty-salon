@@ -1,0 +1,13 @@
+const header=document.querySelector('.header');
+const toggle=document.querySelector('.menu');
+const nav=document.querySelector('.links');
+const reduced=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+const updateHeader=()=>header?.classList.toggle('scrolled',window.scrollY>24);
+updateHeader();window.addEventListener('scroll',updateHeader,{passive:true});
+toggle?.addEventListener('click',()=>{const open=toggle.getAttribute('aria-expanded')==='true';toggle.setAttribute('aria-expanded',String(!open));toggle.setAttribute('aria-label',open?'Menü megnyitása':'Menü bezárása');nav?.classList.toggle('open',!open)});
+nav?.querySelectorAll('a').forEach(link=>link.addEventListener('click',()=>{nav.classList.remove('open');toggle?.setAttribute('aria-expanded','false');toggle?.setAttribute('aria-label','Menü megnyitása')}));
+if('IntersectionObserver'in window&&!reduced){const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('visible');observer.unobserve(entry.target)}}),{threshold:.12,rootMargin:'0px 0px -30px 0px'});document.querySelectorAll('.reveal').forEach((el,index)=>{el.style.transitionDelay=(Math.min(index%4,3)*75)+'ms';observer.observe(el)})}else document.querySelectorAll('.reveal').forEach(el=>el.classList.add('visible'));
+document.querySelectorAll('.demo-form').forEach(form=>form.addEventListener('submit',event=>{event.preventDefault();const status=form.querySelector('.form-status');if(status)status.textContent=form.classList.contains('guide-form')?'Köszönöm az érdeklődést. A feliratkozás ezen a bemutató oldalon még nincs bekötve.':'Köszönöm az üzenetet. Az űrlap beküldése ezen a bemutató oldalon még nincs bekötve.'}));
+const selectedPackage=new URLSearchParams(window.location.search).get('csomag');
+const messageField=document.querySelector('#message');
+if(selectedPackage&&messageField)messageField.value=`Érdeklődöm a(z) ${selectedPackage} csomagról.`;
